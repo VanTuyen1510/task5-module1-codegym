@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+        let m = +prompt("Nhập vào số dòng :");
+        let n = +prompt("Nhập vào số cột");
+        let arr2D = [[]];
+        for (let i = 0; i < m; i++) {
+            arr2D[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr2D[i][j] = +prompt("Nhập dòng " + i + "và" + "Nhập cột" + j);
+            }
+        }
+        document.write("Mảng 2 chiều ban đầu gồm là :" + "<br>")
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                document.write(arr2D[i][j] + "<br>");
+            }
+        }
+        let max = arr2D[0][0];
+        let min = arr2D[0][0];
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if(max < arr2D[i][j]){
+                    max = arr2D[i][j]
+                }
+                if(min > arr2D[i][j]){
+                    min = arr2D[j][i]
+                }
+            }
+        }
+        document.write("Gía trị lớn nhất của mảng 2 chiều  là :" + max + "<br>");
+        document.write("Gíá trị nhỏ nhất của mảng 2 chiều là :" + min);
+</script>
+
+</html>
