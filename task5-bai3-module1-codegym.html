@@ -11,6 +11,7 @@
 
 </body>
 <script>
+    function findMinMax() {
         let m = +prompt("Nhập vào số dòng :");
         let n = +prompt("Nhập vào số cột");
         let arr2D = [[]];
@@ -30,16 +31,17 @@
         let min = arr2D[0][0];
         for (let i = 0; i < m; i++) {
             for (let j = 0; j < n; j++) {
-                if(max < arr2D[i][j]){
+                if (max < arr2D[i][j]) {
                     max = arr2D[i][j]
                 }
-                if(min > arr2D[i][j]){
+                if (min > arr2D[i][j]) {
                     min = arr2D[j][i]
                 }
             }
         }
         document.write("Gía trị lớn nhất của mảng 2 chiều  là :" + max + "<br>");
         document.write("Gíá trị nhỏ nhất của mảng 2 chiều là :" + min);
+    }
+    findMinMax();
 </script>
-
 </html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+            let m = +prompt("Nhập vào số dòng :");
+            let n = +prompt("Nhập vào  số cột");
+            let arr2D = [[]];
+            for (let i = 0; i < m ; i++) {
+                arr2D[i] = [];
+                for (let j = 0; j < n; j++) {
+                    arr2D[i][j] = +prompt("Nhập dòng" + i + "Nhập cột" + j);
+                }
+            }
+            document.write("Mảng 2 chiều ban đầu gồm là :" + "<br>")
+            for (let i = 0; i < m; i++) {
+                for (let j = 0; j < n; j++) {
+                    document.write(arr2D[i][j] + "<br>");
+                }
+            }
+
+         function isPrime(number){
+             let count = 0;
+             for(let i = 2;i <= number;i++){
+                     if(number % i === 0){
+                         count++
+                     }
+                 if(count === 2){
+                     document.write(i + " ");
+                 }
+                 count++
+             }
+             return count;
+         }
+
+
+    document.write("Các số sau khi kiểm tra là số nguyên tố:");
+   let count = 0;
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n  ; j++) {
+            if(isPrime(arr2D[i][j])){
+                document.write(arr2D[i][j]+"&ensp; ")
+               count++
+            }
+        }
+    }
+
+    document.write("<br>")
+    document.write("Tổng số nguyên tố có trong mảng đó là:"+ count);
+
+
+</script>
+</html>
